@@ -1,5 +1,8 @@
 import requests, sys, hashlib, time, smtplib, yaml, datetime
 
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+
 config = yaml.safe_load(open("config.yml"))
 
 if len(sys.argv) < 2:
