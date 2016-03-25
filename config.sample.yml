@@ -2,3 +2,6 @@ username: email
 password: 'password'
 recipients: 'email3, email2, email1'
 subject: 'New updates @ %s'
+cookies:
+  key: value
+  key: value
