@@ -41,7 +41,6 @@ hashes = []
 for url in urls:
     print "    [-] " + url
     r = requests.get(url, cookies=config["cookies"]).text
-    print r
     hashes.append(hashlib.md5(r).hexdigest())
 
 # START LOOKING FOR CHANGES
@@ -52,7 +51,7 @@ while 1:
         hasj = hashlib.md5(r).hexdigest()
         if hasj != hashes[index]:
             # SHIT BANDIT SEND AN EMAIL
-            #sendmail(url)
+            sendmail(url)
             print "[!] We noted a change in the url " + url
             hashes[index] = hasj
 
